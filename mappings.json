@@ -1,0 +1,100 @@
+[
+    {
+        "Guid": "076445ad-f738-4331-91d9-823fc125069e",
+        "Request": {
+            "Path": {
+                "Matchers": [
+                    {
+                        "Name": "WildcardMatcher",
+                        "Pattern": "/v2",
+                        "IgnoreCase": false
+                    }
+                ]
+            },
+            "Methods": [
+                "GET"
+            ]
+        },
+        "Response": {
+            "StatusCode": 200,
+            "Headers": {
+                "Content-Type": "application/json"
+            }
+        }
+    },
+    {
+        "Guid": "1ba1c625-2804-4987-ac72-51b490d5f5ed",
+        "Request": {
+            "Path": {
+                "Matchers": [
+                    {
+                        "Name": "WildcardMatcher",
+                        "Pattern": "/",
+                        "IgnoreCase": false
+                    }
+                ]
+            },
+            "Methods": [
+                "GET"
+            ]
+        },
+        "Response": {
+            "StatusCode": 200,
+            "Headers": {
+                "Content-Type": "application/json"
+            }
+        }
+    },
+    {
+        "Guid": "cf7a69f0-2398-45dd-b274-59159921de9a",
+        "Request": {
+            "Path": {
+                "Matchers": [
+                    {
+                        "Name": "WildcardMatcher",
+                        "Pattern": "/service-two",
+                        "IgnoreCase": false
+                    }
+                ]
+            },
+            "Methods": [
+                "GET"
+            ]
+        },
+        "Response": {
+            "StatusCode": 200,
+            "BodyAsJson": {
+                "Msg": "Hello, service two!"
+            },
+            "Headers": {
+                "Content-Type": "application/json"
+            }
+        }
+    },
+    {
+        "Guid": "e7ea7271-e43a-4a15-bdbe-91404c3be39a",
+        "Request": {
+            "Path": {
+                "Matchers": [
+                    {
+                        "Name": "WildcardMatcher",
+                        "Pattern": "/service-one",
+                        "IgnoreCase": false
+                    }
+                ]
+            },
+            "Methods": [
+                "GET"
+            ]
+        },
+        "Response": {
+            "StatusCode": 200,
+            "BodyAsJson": {
+                "Msg": "Hello, service one!"
+            },
+            "Headers": {
+                "Content-Type": "application/json"
+            }
+        }
+    }
+]
