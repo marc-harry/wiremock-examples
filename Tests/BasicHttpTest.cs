@@ -1,10 +1,6 @@
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Routing;
-using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using WireMock.RequestBuilders;
 using WireMock.ResponseBuilders;
@@ -37,24 +33,6 @@ namespace wiremock
                     .WithBody(JsonConvert.SerializeObject(new TestResponse { Msg = "Hello, service two!" }))
                 );
         }
-
-        // public static TestServer Start(Action<IEndpointRouteBuilder> builder, Action<IServiceCollection> services = null)
-        // {
-        //     var testServer = new TestServer(new WebHostBuilder()
-        //         .ConfigureServices(s =>
-        //         {
-        //             services?.Invoke(s);
-
-        //             s.AddMvcCore();
-        //         })
-        //         .Configure(b =>
-        //         {
-        //             b.UseRouting();
-        //             b.UseEndpoints(builder);
-        //         }));
-        //     return testServer;
-        // }
-
 
         [Fact]
         public async Task ShouldGetFromServiceOne()

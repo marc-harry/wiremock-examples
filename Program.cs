@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Threading.Tasks;
 using WireMock.Net.OpenApiParser;
 using WireMock.Server;
 
@@ -29,18 +28,5 @@ namespace wiremock
 
             Console.ReadLine();
         }
-
-        // async static Task StandaloneServer()
-        // {
-        //     // see source code for all the possible properties
-        //     var settings = new FluentMockServerSettings
-        //     {
-        //         AllowPartialMapping = true,
-        //         StartAdminInterface = true
-        //     };
-        //     StandAloneApp.Start(settings);
-
-        //     await Task.Delay(-1);
-        // }
     }
 }
